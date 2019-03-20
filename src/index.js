@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import DisplaySeason from "./DisplaySeason";
+import Loader from "./Loader.js";
 
 class App extends React.Component {
   state = { lat: null, error: "" };
@@ -27,7 +28,11 @@ class App extends React.Component {
         </div>
       );
     }
-    return <div>loading..</div>;
+    return (
+      <div>
+        <Loader message="Please let's know your location" />
+      </div>
+    );
   }
 }
 
